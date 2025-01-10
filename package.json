@@ -1,0 +1,58 @@
+{
+  "name": "vscode-open-parent-folder",
+  "version": "0.0.1",
+  "displayName": "Open Parent Folder",
+  "description": "Navigate to the parent directory from the VS Code Explorer with a right-click option.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jalal-Alhaddad/vscode-open-parent-folder.git"
+  },
+  "publisher": "Jalal Alhaddad",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-open-parent-folder.openParent"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-open-parent-folder.openParent",
+        "title": "Open Parent Folder",
+        "category": "Explorer"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "vscode-open-parent-folder.openParent",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "build": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
