@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "displayName": "Open Parent Folder",
   "description": "Navigate to the parent directory from the VS Code Explorer with a right-click option.",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/Jalal-Alhaddad/vscode-open-parent-folder.git"
